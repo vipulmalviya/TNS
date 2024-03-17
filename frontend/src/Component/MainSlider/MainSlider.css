@@ -1,0 +1,126 @@
+.MainSlider {
+  position: relative;
+  width: 100vw;
+  z-index: 1 !important;
+  /* background-color: red; */
+}
+
+.slide-item {
+  height: 100vh;  
+  width: 100%;
+}
+
+.bannerImg {
+  height: 100%;  
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Slide details */
+.slide-details {
+  position: absolute;
+  max-width: 500px;
+  bottom: 100px;
+  left: 60px;
+  color: #fff;
+}
+
+.movieTitle {
+  font-size: var(--h1-font-size);
+  margin-bottom: 10px;
+  line-height: 1rem !important;
+  font-weight: bold;
+  font-family: "sfbold" !important;
+  letter-spacing: 0.8rem;
+}
+
+.aboutMovie {
+  color: var(--light-color);
+  padding: 0rem 1rem 0rem 0rem;
+  justify-content: flex-start !important;
+}
+
+.aboutMovie p {
+  font-size: var(--normal-font-size);
+  margin-right: 3rem;
+  font-weight: 600 !important;
+  letter-spacing: .1rem;
+}
+
+.movieDescription {
+  font-size: var(--normal-font-size);
+  font-weight: 500 !important;
+}
+
+.aboutMovie span h3 {
+  font-weight: bold !important;
+  margin-left: .5rem;
+}
+
+.arrows {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  font-weight: 100 !important;
+  transform: translate(0%, -50%);
+  z-index: 10;
+}
+
+.arrows img {
+  height: 3vw;
+  cursor: pointer;
+}
+
+.movieBtns {
+  gap: 1rem;
+}
+
+.movieBtns .mainbtn {
+  font-size: var(--normal-font-size) !important;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.movieBtns .mainbtn>img {
+  width: fit-content;
+  margin: 0 1rem;
+}
+
+.movieBtns .mainbtnSec img {
+  width: fit-content;
+  margin: 0 1rem;
+}
+
+.movieBtns .mainbtnSec {
+  color: var(--accesnt-color) !important;
+  font-size: var(--normal-font-size) !important;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  white-space: nowrap;
+  border: 2px solid var(--accesnt-color);
+}
+
+
+.owl-carousel button.owl-dot{
+  height: 10px !important;
+  width: 10px !important;
+  /* border: 2px solid white; */
+  padding: .5rem !important;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.324) ;
+  margin: 0 .5rem;
+}
+.MainSlider .MainSlider .owl-dots{
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+}
+.MainSlider .MainSlider .owl-dots .active{
+  padding: .7rem !important;
+  background:var(--accesnt-color) !important;
+}

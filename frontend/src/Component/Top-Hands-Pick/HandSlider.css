@@ -1,0 +1,41 @@
+.HandCards {
+    position: relative;
+    width: 100%;
+    gap: 3rem;
+    padding: 2rem;
+    justify-content: flex-start !important;
+}
+
+.HandCards .card {
+    position: relative;
+    height: 400px;
+    min-width: 350px;
+    padding: 2rem;
+    /* background-color: red; */
+    /* background: red; */
+}
+
+.HandCards .card h2 {
+    font-size: 17rem;
+    height: 100%;
+    text-transform: capitalize;
+    background:linear-gradient(to top ,#C2C1C194 ,#FFFFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-right: -2rem;
+}
+
+.HandCards .card img {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px !important;
+    object-fit: cover;
+
+}
+
+@media screen and (max-width: 428px) {
+    .HandCards {
+        padding: 1rem;
+    }
+}

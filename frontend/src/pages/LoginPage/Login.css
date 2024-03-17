@@ -1,0 +1,64 @@
+
+
+.Logindiv {
+    z-index: 11 !important;
+    height: calc(100vh - 100px);
+    color: white;
+    /* background: yellow; */
+}
+
+.Lleft{
+    width: 100%;
+    height: 100%;
+    align-items: flex-start !important;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Lleft hr{
+    width: 100%;
+}
+
+/* form css */
+.Rform {
+    flex-direction: column;
+    align-items: flex-start !important;
+    width: 100%;
+    padding: 2rem 0 0 0;
+    color: white;
+    gap: 5px;
+}
+
+
+.Rleft .hinglight{
+    font-size: var(--big-font-size);
+    margin-bottom: 1rem;
+}
+
+.subhadding{
+    font-size: var(--h2-font-size);
+    line-height: 3.5rem;
+}
+.hinglight {
+    color: #BACC4A;
+}
+.hadding{
+    font-size: 10em ;
+}
+
+.Rleft p{
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.Rleft li{
+    display: flex;
+    list-style: none;
+    align-items: center !important;
+    justify-content: center;
+}
+.Rleft img{
+    margin-right:1rem ;
+}
+.Rfooter span{
+    cursor: pointer;
+}

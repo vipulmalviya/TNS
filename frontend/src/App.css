@@ -1,0 +1,199 @@
+@font-face {
+  font-family: sfregular;
+  src: url("frontend/public/fonts/SFPRODISPLAYREGULAR.OTF");
+}
+
+@font-face {
+  font-family: sfmedium;
+  src: url("frontend/public/fonts/SFPRODISPLAYMEDIUM.OTF");
+}
+
+@font-face {
+  font-family: sfbold;
+  src: url("frontend/public/fonts/SFPRODISPLAYBOLD.OTF");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #282829;
+  overflow-x: hidden !important;
+
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* reusable classes */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  padding: 2rem;
+}
+
+.container {
+  width: 90%;
+  margin: auto auto;
+}
+
+
+body::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
+
+/* CSS VATIABLES  */
+
+:root {
+  /* COLORS */
+  --background-color: #282829;
+  --priamry-color: #ffffff;
+  --light-color: #ffffffc3;
+  --accesnt-color: #BACC4A;
+  --black-color: #080808;
+
+  /* FONT AND TYPOGRAPHY */
+  --body-font: 'sfregular', sans-serif;
+
+  --big-font-size: 4em;
+  --h1-font-size: 3em;
+  --h2-font-size: 2em;
+  --h3-font-size: 1.5em;
+  --normal-font-size: 1.2em;
+  --tiny-font-size: 16px;
+}
+
+/* Responsive typography */
+
+/* @media screen and (max-width: 1024px) {
+  :root {
+    --big-font-size: 5em;
+  }
+} */
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --big-font-size: 4em;
+    --h1-font-size: 3em;
+    --h2-font-size: 2em;
+    --h3-font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 3.5em;
+    --h1-font-size: 2.5em;
+    --h2-font-size: 1.5em;
+    --h3-font-size: 1.2em;
+    --small-font-size: 1.2em;
+    --tiny-font-size: 18px;
+  }
+  section {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  :root {
+    --big-font-size: 3em;
+    --h1-font-size: 2em;
+    --h2-font-size: 1.5em;
+    --h3-font-size: 1.1em;
+    --small-font-size: 1.2em;
+    --tiny-font-size: 16px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 3rem !important;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  :root {
+    --big-font-size: 2em;
+    --h1-font-size: 1.3em;
+    --h2-font-size: 1.2em;
+    --h3-font-size: 1.1em;
+    --small-font-size: 1em;
+    --tiny-font-size: 14px;
+  }
+}
+
+
+
+body,
+button,
+input,
+textarea {
+  font-size: var(--tiny-font-size);
+  font-family: "sfregular";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "sfbold";
+  text-transform: capitalize;
+  line-height: 4rem;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "sfbold";
+  text-transform: capitalize;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+p {
+  font-family: "sfregular";
+  line-height: 1.406em;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: var(--tiny-font-size);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--priamry-color);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.grid {
+  display: grid;
+  gap: 1em;
+}
+
+.flexbox {
+  flex-direction: column;
+  justify-content: center;
+}

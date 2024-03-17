@@ -1,0 +1,35 @@
+.pcontainer{
+    min-height: 150px;
+    width: 100%;
+    background-color: var(--accesnt-color);
+    padding: 1rem 3rem;
+    justify-content: space-between !important;
+    border-radius: 25px;
+}
+.pcontainer h2{
+    font-size: var(--h3-font-size);
+    line-height:2rem;
+}
+.pcontainer h2{
+    font-size: var(--h3-font-size);
+    line-height:2rem;
+}
+.pcontainer > .mainbtnSec{
+    font-size: var(--normal-font-size);
+    width: fit-content;
+    margin: 0;
+    background: var(--black-color);
+}
+
+
+
+@media screen and (max-width: 786px) {
+
+    .pcontainer{
+        flex-direction: column;
+    }
+    .pcontainer h2{
+        line-height:1.5rem !important;
+    }
+
+}
