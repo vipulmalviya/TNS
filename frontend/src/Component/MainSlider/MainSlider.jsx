@@ -35,7 +35,7 @@ const MainSlider = () => {
             //     catagory: "Biography, Drama",
             // }
         ]
-)
+    )
     const fetchMovieData = async () => {
         const response = await fetch("http://www.omdbapi.com/?s=spider-man&type=movie&apikey=9c06a160");
         const responsejason = await response.json();
@@ -91,7 +91,15 @@ const MainSlider = () => {
 
                 {Movies.map((slide, index) => (
                     <div key={index} className="slide-item">
-                        <img height={"100%"} width={"100%"} className='bannerImg' src={slide.Poster} alt={slide.title} />
+                        <div className='bannerContainer'
+                         style={{
+                            background: `linear-gradient(to top, black, transparent), url(${slide.Poster})`,
+                            backgroundPosition: 'center',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat'
+                        }}>
+                            {/* <img height={"100%"} width={"100%"} className='bannerImg' src={slide.Poster} alt={slide.title} /> */}
+                        </div>
                         <div className="slide-details">
                             <h2 className='movieTitle'>{slide.Title}</h2>
                             <div className='aboutMovie flex'>

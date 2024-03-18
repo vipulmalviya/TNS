@@ -10,10 +10,13 @@
   width: 100%;
 }
 
-.bannerImg {
+.bannerContainer{
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  background: linear-gradient(to bottom , #0000 ,#ffff);
 }
 
 /* Slide details */
