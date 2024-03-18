@@ -1,53 +1,47 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import "./movieSlider.css"
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-const MovieSlider = ({ title }) => {
-    const Lcard = [
-        {
-            cardID: 1,
-            cardUrl: "frontend/public/da92a39b19b38d7c9b6e839bfff30d13.png",
-            movieName: "Saltburn",
-            watch: "91.5",
-            category: "Comedy,Drama",
-        },
-        {
-            cardID: 2,
-            cardUrl: "frontend/public/299c4228c5a9a0bad5783800b7cff179.png",
-            movieName: "Saltburn",
-            watch: "91.5",
-            category: "Comedy,Drama",
-        },
-        {
-            cardID: 3,
-            cardUrl: "frontend/public/7c40e7950bccd488ce91b53447207cad.png",
-            movieName: "Saltburn",
-            watch: "91.5",
-            category: "Comedy,Drama",
-        },
-        {
-            cardID: 4,
-            cardUrl: "frontend/public/7c40e7950bccd488ce91b53447207cad.png",
-            movieName: "Saltburn",
-            watch: "91.5",
-            category: "Comedy,Drama",
-        },
-        {
-            cardID: 5,
-            cardUrl: "frontend/public/7c40e7950bccd488ce91b53447207cad.png",
-            movieName: "Saltburn",
-            watch: "91.5",
-            category: "Comedy,Drama",
-        },
-        {
-            cardID: 6,
-            cardUrl: "frontend/public/7c40e7950bccd488ce91b53447207cad.png",
-            movieName: "Saltburn",
-            watch: "91.5",
-            category: "Comedy,Drama",
-        }
-    ];
+const MovieSlider = ({ title,type }) => {
+    const [Movies, setMovies] = useState(
+        [
+            // {
+            //     imageUrl: 'frontend/public/Rectangle 15.jpg',
+            //     title: 'OPPENHEIMER',
+            //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
+            //     year: "2023",
+            //     watch: "97.3",
+            //     catagory: "Biography, Drama",
+            // },
+            // {
+            //     imageUrl: 'frontend/public/sambhadur.png',
+            //     title: 'OPPENHEIMER',
+            //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
+            //     year: "2023",
+            //     watch: "97.3",
+            //     catagory: "Biography, Drama",
+            // },
+            // {
+            //     imageUrl: 'frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png',
+            //     title: 'OPPENHEIMER',
+            //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
+            //     year: "2023",
+            //     watch: "97.3",
+            //     catagory: "Biography, Drama",
+            // }
+        ]
+)
+    const fetchMovieData = async () => {
+        const response = await fetch(`http://www.omdbapi.com/?s=spider-man&type=${type}&apikey=9c06a160`);
+        const responsejason = await response.json();
+        setMovies(responsejason.Search)
+    }
+    // console.log(type);
+
+    useEffect(() => {
+        fetchMovieData();
+    }, [])
 
 
     const handlePrevClick = () => {
@@ -84,7 +78,7 @@ const MovieSlider = ({ title }) => {
                             nav: false,
                         },
                         768: {
-                            items: 2,
+                            items: 3,
                             nav: false,
                         },
                         1000: {
@@ -92,15 +86,15 @@ const MovieSlider = ({ title }) => {
                             nav: false,
                         },
                     }}>
-                    {Lcard.map((elem) => <div className="card " key={elem.cardID}>
-                        <img height={"100%"} width={"100%"} src={elem.cardUrl} alt="" />
+                    {Movies.map((elem,index) => <div className="card " key={index}>
+                        <img height={"400px"} width={"400px"} src={elem.Poster} alt="" />
                         <div className='movieDetails'>
                             <span className='flex'>
-                                <h3>{elem.movieName}</h3>
+                                <h3>{elem.Title}</h3>
                                 <img height={"30px"} src="frontend/public/TNS 1.svg" alt="" />
                             </span>
                             <span className='flex'>
-                                <p>{elem.category}</p>
+                                <p>{elem.Type}</p>
                                 <span className="number">{elem.watch}</span>
                             </span>
                         </div>

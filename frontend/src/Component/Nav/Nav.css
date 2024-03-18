@@ -23,6 +23,33 @@ nav .left {
     height: 100%;
     width: 30%;
 }
+.navM{
+    width: 100%;
+    justify-content: flex-end !important;
+}
+.navM form {
+    position: relative;
+    border: 1px solid #c2bebe5a;
+    color: white !important;
+    outline: none;
+    padding: 1rem;
+    width: 350px;
+    border-radius: 12px;
+    height: 35px;
+}
+.navM form img {
+   position: absolute;
+   left: 10%;
+   cursor: pointer;
+}
+.navM input {
+    position: absolute;
+    color: white !important;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    background: transparent;
+}
 
 nav .right {
     padding: 1rem;
@@ -32,8 +59,22 @@ nav .right {
     width: 30%;
 }
 
-.hamburgur{
+.Watchlist{
+    gap: 2rem;
+    color:var(--priamry-color);
+    font-family:"sfregular" !important ;
+}
+
+.hamburgur {
     cursor: pointer;
     color: white;
     font-size: 1rem;
+    width: fit-content !important;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        padding: 0rem 1rem;
+    }
 }

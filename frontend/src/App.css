@@ -124,6 +124,10 @@ body::-webkit-scrollbar {
   h3 {
     line-height: 3rem !important;
   }
+
+  .container{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 300px) {

@@ -61,7 +61,7 @@ const HandSlider = ({title}) => {
                         items: 4,
                     },
                 }}>
-                {Lcard.map((elem) => <div className="card flex" key={elem.cardID}>
+                {Lcard.map((elem,index) => <div className="card flex" key={index}>
                     <h2 className='flex'>{elem.cardID}</h2>
                     <img  src={elem.cardUrl} alt="" />
                 </div>)}

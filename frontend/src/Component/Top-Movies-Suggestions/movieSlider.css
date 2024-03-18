@@ -8,8 +8,8 @@
 }
 
 .MovieCards .card {
-    min-height: 400px;
-    min-width: 350px;
+    /* height: 600px; */
+    /* min-width: 350px; */
     padding: 2rem;
 
 
@@ -38,10 +38,11 @@
     line-height: 2rem;
 }
 
-.movieDetails span{
+.movieDetails span {
     justify-content: space-between;
 }
-.movieDetails span img{
+
+.movieDetails span img {
     width: fit-content !important;
 }
 
@@ -49,4 +50,10 @@
     .MovieCards {
         padding: 1rem;
     }
+}
+
+.owl-carousel.owl-drag .owl-item {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
 }

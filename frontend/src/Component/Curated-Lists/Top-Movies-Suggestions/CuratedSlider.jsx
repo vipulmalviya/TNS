@@ -54,7 +54,7 @@ const CuratedSlider = ({ title }) => {
                             items: 3,
                         },
                     }}>
-                    {Lcard.map((elem) => <div className="card flex flexbox" key={elem.cardID} style={{
+                    {Lcard.map((elem,index) => <div className="card flex flexbox" key={index} style={{
                         background: `linear-gradient(to top, black, transparent), url(${elem.Url})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',

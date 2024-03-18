@@ -7,6 +7,7 @@ import WatchlistPage from './pages/WatchlistPage/WatchlistPage';
 import Nav from './Component/Nav/Nav';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import Footer from './Component/Footer/Footer';
 
 function App() {
   const [Click, setClick] = useState(false)
@@ -16,26 +17,28 @@ function App() {
     setOpen(!open)
   }
 
-
   function Clickkro() {
     setClick(!Click)
   }
 
+
+  // console.log(InputValue);
 
 
   const location = useLocation();
 
   return (
     <>
-      <AnimatePresence mode='wait'>
-        <Nav onclick={onClick} open={open} />
+      <AnimatePresence initial={false}>
+        <Nav onclick={onClick} open={open}/>
         <Routes location={location} key={location.key}>
           <Route path="/" element={<Login prop={onClick} open={open} />} />
           <Route path="/register" element={<Register prop={onClick} open={open} click={Click} />} />
-          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/home" element={<Home  />} />
           <Route path="/movies/:id" element={<SingleMoviePage />} />
           <Route path="/watchlist" element={<WatchlistPage />} />
         </Routes>
+        <Footer />
       </AnimatePresence>
     </>
   );

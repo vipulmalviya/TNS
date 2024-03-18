@@ -10,10 +10,10 @@ import "./Home.css"
 
 
 
-const Home = () => {
+const Home = ({value}) => {
   return (
     <Fragment>
-      <MainSlider />
+      <MainSlider Input={value} />
       <section>
         <div className="container">
           <h3 className='SectionLable'>
@@ -26,8 +26,8 @@ const Home = () => {
         </div>
       </section>
       <HandSlider title={"Top Hand-Pick Suggestions"} />
-      <MovieSlider title={"Top Movies Suggestions"} />
-      <MovieSlider title={"Top Tv Series Suggestions"} />
+      <MovieSlider  type={"movie"} title={"Top Movies Suggestions"} />
+      <MovieSlider type={"series"} title={"Top Tv Series Suggestions"} />
       <CuratedSlider title={"Curated Lists Just For You"} />
 
     </Fragment>

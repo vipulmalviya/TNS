@@ -19,7 +19,7 @@
     font-size: 17rem;
     height: 100%;
     text-transform: capitalize;
-    background:linear-gradient(to top ,#C2C1C194 ,#FFFFFF);
+    background: linear-gradient(to top, #C2C1C194, #FFFFFF);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -37,5 +37,11 @@
 @media screen and (max-width: 428px) {
     .HandCards {
         padding: 1rem;
+    }
+
+
+    .HandCards .card h2 {
+        font-size: 10rem;
+        margin-right: -1rem;
     }
 }
