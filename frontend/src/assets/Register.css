@@ -1,0 +1,225 @@
+/* ragisterdiv css */
+/* left css */
+.Rleft {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0%, -50%);
+    width: 100vw;
+    min-height: 100vh;
+    align-items: flex-start !important;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--background-color);
+    padding: 0 5rem;
+    z-index: 1;
+}
+
+.Rleft li span {
+    font-size: var(--normal-font-size);
+}
+
+/* right css */
+.Rright {
+    color: white;
+    position: absolute;
+    top: 0;
+    right: -50%;
+    background-color: rgba(0, 0, 0, 0.151);
+    z-index: 9 !important;
+    backdrop-filter: blur(20px);
+    padding: 4rem 8rem;
+    width: 40vw;
+    min-height: 100vh;
+    align-items: flex-start !important;
+    flex-direction: column;
+    border-left: .2px solid white;
+}
+
+.open {
+    right: 0%;
+    transition: all .5s ease;
+}
+
+.open2 {
+    left: 0%;
+    transition: all .5s ease;
+}
+
+/* form css */
+.Rform {
+    flex-direction: column;
+    align-items: flex-start !important;
+    width: 100%;
+    padding: 2rem 0 0 0;
+    color: white;
+    gap: 5px;
+}
+
+.Rform input {
+    outline: none;
+    color: white;
+    background: transparent;
+    border: .8px solid white;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.Rform label {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+
+.Rleft .hinglight {
+    font-size: var(--big-font-size);
+    margin-bottom: 1rem;
+}
+
+.subhadding {
+    font-size: var(--h2-font-size);
+}
+
+.hinglight {
+    color: #BACC4A;
+}
+
+.Rleft p {
+    margin-bottom: 2rem;
+    font-size: var(--tiny-font-size);
+}
+
+.Rleft li {
+    display: flex;
+    list-style: none;
+    align-items: center !important;
+    justify-content: center;
+}
+
+.Rleft img {
+    margin-right: 1rem;
+}
+
+/* switchbtn css */
+.switchbtn {
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.switch {
+    align-items: center;
+    justify-content: center;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch label {
+    margin-right: 1rem;
+    margin-left: 0;
+    margin-top: -1rem;
+    margin-bottom: 0;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    /* padding: 15px !important; */
+    border-radius: 15px;
+    border: 1.5px solid #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.switch label::after {
+    content: url("frontend/public/image/Frame 556.svg");
+    position: absolute;
+    left: 5%;
+    top: 55%;
+    transform: translate(0%, -50%);
+    width: 35%;
+    height: 100%;
+    /* border-radius: 1px; */
+    transition: 0.3s;
+}
+
+.switch input:checked~label {
+    /* border-color: #ffffff; */
+    background-color: #BACC4A;
+}
+
+
+.switch input:checked~label::after {
+    translate: 25px 0;
+    /* background: #ffffff; */
+}
+
+.switch input:disabled~label {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.switch p {
+    text-align: start;
+}
+
+.Rfooter span {
+    cursor: pointer;
+}
+
+
+
+/* responsive code */
+
+/* big screen  */
+
+@media screen and (min-width:1024px) {
+    .Rright {
+        padding: 2rem;
+    }
+}
+
+/* tablets screen  */
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .Rright {
+        padding: 2rem;
+        width: 100vw;
+    }
+
+    .Rleft {
+        padding: 2rem;
+        width: 100vw;
+    }
+
+}
+
+/* tablets screen  */
+@media screen and (min-width:768px) {}
+
+/* mobiles screen  */
+
+@media screen and (max-width:428px) {
+
+    .Rleft {
+        padding: 3rem 1rem;
+    }
+
+    .Rright {
+        padding: 4rem 1rem 1rem;
+        width: 100vw;
+    }
+
+    .Rform {
+        padding-top: 0rem !important;
+        gap: 0;
+    }
+
+    .switchbtn {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}

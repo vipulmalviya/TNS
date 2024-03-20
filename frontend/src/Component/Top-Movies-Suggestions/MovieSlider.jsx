@@ -8,48 +8,48 @@ import Button from '../buttons/Button';
 
 const MovieSlider = ({ title, type }) => {
 
-    // const data = [
-    //     {
-    //         Poster: 'frontend/public/image/da92a39b19b38d7c9b6e839bfff30d13.png',
-    //         Title: 'title',
-    //         watch: "97.3",
-    //         catagory: "Biography, Drama",
-    //     },
-    //     {
-    //         Poster: 'frontend/public/image/sambhadur.png',
-    //         Title: 'title',
-    //         watch: "97.3",
-    //         catagory: "Biography, Drama",
-    //     },
-    //     {
-    //         Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
-    //         Title: 'title',
+    const data = [
+        {
+            Poster: 'frontend/public/image/da92a39b19b38d7c9b6e839bfff30d13.png',
+            Title: 'title',
+            watch: "97.3",
+            catagory: "Biography, Drama",
+        },
+        {
+            Poster: 'frontend/public/image/sambhadur.png',
+            Title: 'title',
+            watch: "97.3",
+            catagory: "Biography, Drama",
+        },
+        {
+            Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+            Title: 'title',
 
-    //         watch: "97.3",
-    //         catagory: "Biography, Drama",
-    //     },
-    //     {
-    //         Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
-    //         Title: 'title',
+            watch: "97.3",
+            catagory: "Biography, Drama",
+        },
+        {
+            Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+            Title: 'title',
 
-    //         watch: "97.3",
-    //         catagory: "Biography, Drama",
-    //     },
-    //     {
-    //         Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
-    //         Title: 'title',
+            watch: "97.3",
+            catagory: "Biography, Drama",
+        },
+        {
+            Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+            Title: 'title',
 
-    //         watch: "97.3",
-    //         catagory: "Biography, Drama",
-    //     },
-    //     {
-    //         Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
-    //         Title: 'title',
+            watch: "97.3",
+            catagory: "Biography, Drama",
+        },
+        {
+            Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+            Title: 'title',
 
-    //         watch: "97.3",
-    //         catagory: "Biography, Drama",
-    //     }
-    // ]
+            watch: "97.3",
+            catagory: "Biography, Drama",
+        }
+    ]
 
 
     const [Movies, setMovies] = useState([])
@@ -63,15 +63,15 @@ const MovieSlider = ({ title, type }) => {
     // }
     // console.log(type);
 
-    useEffect(() => {
-        const fetchMovieData = async () => {
-            const response = await fetch(`http://localhost:5000/allmovies`);
-            const responsejason = await response.json();
-            setMovies(responsejason);
-        }
+    // useEffect(() => {
+    //     const fetchMovieData = async () => {
+    //         const response = await fetch(`http://localhost:5000/allmovies`);
+    //         const responsejason = await response.json();
+    //         setMovies(responsejason);
+    //     }
 
-        fetchMovieData();
-    })
+    //     fetchMovieData();
+    // })
 
 console.log(Movies);
     const handlePrevClick = () => {
@@ -116,16 +116,16 @@ console.log(Movies);
                             nav: false,
                         },
                     }}>
-                    {Movies.map((elem, index) => <div className="card " key={index}>
-                        <img height={"400px"} width={"400px"} src={elem.moviePoster} alt="" />
+                    {data.map((elem, index) => <div className="card " key={index}>
+                        <img height={"400px"} width={"400px"} src={elem.Poster} alt="" />
                         <div className='movieDetails'>
                             <span className='flex'>
-                                <h4>{elem.movieTitle}</h4>
+                                <h4>{elem.Title}</h4>
                                 <img height={"30px"} src="frontend/public/image/TNS 1.svg" alt="" />
                             </span>
                             <span className='flex'>
-                                <p>{elem.movieCategory}</p>
-                                <span className="number">{elem.movieRating}</span>
+                                <p>{elem.catagory}</p>
+                                <span className="number">{elem.watch}</span>
                             </span>
                             <Button>+ Add to Watchlist</Button>
                         </div>
