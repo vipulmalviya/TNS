@@ -1,0 +1,64 @@
+section {
+    color: white;
+}
+
+.header {
+    justify-content: flex-start !important;
+    gap: 3rem;
+}
+.header h2 {
+    font-size: var(--h2-font-size);
+}
+
+.watchlistCard {
+    position: relative;
+    /* min-height: 50vh; */
+    width: 50%;
+    padding: 2rem ;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.143);
+}
+
+.cardContainer {
+    height: 350px;
+    width: 100%;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.cardContainer .card {
+    height:100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+}
+
+.watchlistCards {
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem 0; 
+}
+
+progress {
+    width: 100%;
+    height: 7px;
+    background-color:yellow !important;
+}
+
+.cardHeaders{
+    justify-content: space-between !important;
+    padding: 0 2rem;
+}
+.cardHeaders h2{
+    font-size: var(--h2-font-size);
+}
+
+.MovieCards .mainbtnSec{
+    border: 1px solid var(--accesnt-color) !important;
+    color: var(--accesnt-color) !important;
+    margin: 1rem 0;
+}
+.MovieCards .mainbtnSec img{
+  width: fit-content;
+}

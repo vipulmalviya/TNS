@@ -3,67 +3,97 @@ import "./movieSlider.css"
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-const MovieSlider = ({ title,type }) => {
-    const [Movies, setMovies] = useState(
-        [
-            // {
-            //     imageUrl: 'frontend/public/Rectangle 15.jpg',
-            //     title: 'OPPENHEIMER',
-            //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
-            //     year: "2023",
-            //     watch: "97.3",
-            //     catagory: "Biography, Drama",
-            // },
-            // {
-            //     imageUrl: 'frontend/public/sambhadur.png',
-            //     title: 'OPPENHEIMER',
-            //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
-            //     year: "2023",
-            //     watch: "97.3",
-            //     catagory: "Biography, Drama",
-            // },
-            // {
-            //     imageUrl: 'frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png',
-            //     title: 'OPPENHEIMER',
-            //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
-            //     year: "2023",
-            //     watch: "97.3",
-            //     catagory: "Biography, Drama",
-            // }
-        ]
-)
-    const fetchMovieData = async () => {
-        const response = await fetch(`http://www.omdbapi.com/?s=spider-man&type=${type}&apikey=9c06a160`);
-        const responsejason = await response.json();
-        setMovies(responsejason.Search)
-    }
+import Button from '../buttons/Button';
+
+
+const MovieSlider = ({ title, type }) => {
+
+    // const data = [
+    //     {
+    //         Poster: 'frontend/public/image/da92a39b19b38d7c9b6e839bfff30d13.png',
+    //         Title: 'title',
+    //         watch: "97.3",
+    //         catagory: "Biography, Drama",
+    //     },
+    //     {
+    //         Poster: 'frontend/public/image/sambhadur.png',
+    //         Title: 'title',
+    //         watch: "97.3",
+    //         catagory: "Biography, Drama",
+    //     },
+    //     {
+    //         Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+    //         Title: 'title',
+
+    //         watch: "97.3",
+    //         catagory: "Biography, Drama",
+    //     },
+    //     {
+    //         Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+    //         Title: 'title',
+
+    //         watch: "97.3",
+    //         catagory: "Biography, Drama",
+    //     },
+    //     {
+    //         Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+    //         Title: 'title',
+
+    //         watch: "97.3",
+    //         catagory: "Biography, Drama",
+    //     },
+    //     {
+    //         Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+    //         Title: 'title',
+
+    //         watch: "97.3",
+    //         catagory: "Biography, Drama",
+    //     }
+    // ]
+
+
+    const [Movies, setMovies] = useState([])
+
+
+    // const fetchMovieData = async () => {
+
+    //     const response = await fetch(`http://localhost:5000/allmovies`);
+    //     const responsejason = await response.json();
+    //     setMovies(responsejason)
+    // }
     // console.log(type);
 
     useEffect(() => {
+        const fetchMovieData = async () => {
+            const response = await fetch(`http://localhost:5000/allmovies`);
+            const responsejason = await response.json();
+            setMovies(responsejason);
+        }
+
         fetchMovieData();
-    }, [])
+    })
 
-
+console.log(Movies);
     const handlePrevClick = () => {
         $(".owl-carousel").trigger("prev.owl.carousel");
-      };
-    
-      const handleNextClick = () => {
+    };
+
+    const handleNextClick = () => {
         $(".owl-carousel").trigger("next.owl.carousel");
-      };
-    
+    };
+
     return (
         <section>
             <div className="container">
                 <h3 className='SectionLable'>{title}{">"}</h3>
                 <div className='arrows'>
-                <span onClick={handlePrevClick}>
-                    <img src="frontend/public/left.svg" alt="" />
-                </span>
-                <span onClick={handleNextClick}>
-                    <img src="frontend/public/right.svg" alt="" />
-                </span>
-            </div>
+                    <span onClick={handlePrevClick}>
+                        <img src="frontend/public/image/left.svg" alt="" />
+                    </span>
+                    <span onClick={handleNextClick}>
+                        <img src="frontend/public/image/right.svg" alt="" />
+                    </span>
+                </div>
                 <OwlCarousel className="MovieCards flex"
                     items={5}
                     margin={10}
@@ -86,17 +116,18 @@ const MovieSlider = ({ title,type }) => {
                             nav: false,
                         },
                     }}>
-                    {Movies.map((elem,index) => <div className="card " key={index}>
-                        <img height={"400px"} width={"400px"} src={elem.Poster} alt="" />
+                    {Movies.map((elem, index) => <div className="card " key={index}>
+                        <img height={"400px"} width={"400px"} src={elem.moviePoster} alt="" />
                         <div className='movieDetails'>
                             <span className='flex'>
-                                <h3>{elem.Title}</h3>
-                                <img height={"30px"} src="frontend/public/TNS 1.svg" alt="" />
+                                <h4>{elem.movieTitle}</h4>
+                                <img height={"30px"} src="frontend/public/image/TNS 1.svg" alt="" />
                             </span>
                             <span className='flex'>
-                                <p>{elem.Type}</p>
-                                <span className="number">{elem.watch}</span>
+                                <p>{elem.movieCategory}</p>
+                                <span className="number">{elem.movieRating}</span>
                             </span>
+                            <Button>+ Add to Watchlist</Button>
                         </div>
                     </div>)}
                 </OwlCarousel>

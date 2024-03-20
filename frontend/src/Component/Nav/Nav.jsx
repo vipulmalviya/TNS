@@ -8,11 +8,11 @@ const Nav = ({ onclick, open ,onchangefunc ,InputValue }) => {
         <header>
             <nav className='flex'>
                 <div className="left flex">
-                    <div className="logo"><img height={"100%"} weight={"100%"} src="frontend/public/Logo.svg" alt="" /></div>
+                    <div className="logo"><img height={"100%"} weight={"100%"} src="frontend/public/image/Logo.svg" alt="" /></div>
                 </div>
                 <div className="navM flex">
                     <form action="" className='flex'>
-                        <img src="frontend/public/search.svg" alt="" />
+                        <img src="frontend/public/image/search.svg" alt="" />
                         <input
                         value={InputValue}
                         onChange={onchangefunc}
@@ -22,7 +22,7 @@ const Nav = ({ onclick, open ,onchangefunc ,InputValue }) => {
                 <div className="right flex">
                     <span className='Watchlist flex'>
                         <p>My Watchlist</p>
-                        <img src="frontend/public/Ellipse 33.svg" alt="" />
+                        <img src="frontend/public/image/Ellipse 33.svg" alt="" />
                     </span>
                     <div className="hamburgur" onClick={onclick}>
                         {open ?

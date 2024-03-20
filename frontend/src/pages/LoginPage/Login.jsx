@@ -3,7 +3,7 @@ import "./Login.css"
 import Button from '../../Component/buttons/Button'
 import ButtonSec from '../../Component/buttons/ButtonSec'
 import Home from '../HomePage/Home.jsx'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import axios from 'axios'
 
@@ -13,17 +13,21 @@ const Login = ({ clickkro, open, prop }) => {
   const [email, setEmail] = useState()
   const [pass, setPass] = useState()
   const navigate = useNavigate();
+
+
   const handleSubmit = (e) => {
+
     e.preventDefault();
     axios.post('http://localhost:5000/', { email, pass })
       .then(result => {
-        console.log(result)
-        if(result.data === "Success"){ 
-          navigate('/home')
-          }
+        console.log(result);
+        if (result.data === "success") {
+          navigate('/home'); 
+        }
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err));
   }
+
   return (
     <Fragment>
       <Home />
@@ -47,7 +51,7 @@ const Login = ({ clickkro, open, prop }) => {
         </form>
         <br />
         <ButtonSec className="mb-1 flex">
-          <img src="frontend/public/google.svg" alt="" />
+          <img src="frontend/public/image/google.svg" alt="" />
           <span className='flex'>
             Log in with Google
           </span>

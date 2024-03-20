@@ -1,4 +1,5 @@
 .footer {
+    z-index: 0;
     position: relative;
     /* min-height: 50vh; */
     width: 100vw;
@@ -28,14 +29,10 @@
 }
 
 .footerM {
-    z-index: 0;
     padding: 0 2rem;
     background-color: #1E1E1E;
 }
 
-.footercls {
-    position: absolute !important;
-}
 
 .footerM-l {
     padding: 5rem;
@@ -108,7 +105,7 @@
 }
 
 .input-with-icon {
-    background-image: url('frontend/public/arrow.svg') !important;
+    background-image: url('frontend/public/image/arrow.svg') !important;
     background-repeat: no-repeat !important;
     background-position: 95% center !important;
     background-size: 20px 20px;
@@ -126,26 +123,21 @@
 }
 
 .footerB button {
-    z-index: 10;
     position: absolute;
     right: 35px;
     top: 50%;
     transform: translate(0%, -50%);
-    height: 35px;
-    width: 30px;
-    border-radius: 50%;
-    border: 1px solid white;
     background-color: transparent;
-    color: white;
 }
 
 
 
 @media screen and (max-width: 800px) {
-    .footerT{
+    .footerT {
         width: 100%;
         padding: 2rem 1rem;
     }
+
     .footerM {
         flex-direction: column;
         padding: 1rem;

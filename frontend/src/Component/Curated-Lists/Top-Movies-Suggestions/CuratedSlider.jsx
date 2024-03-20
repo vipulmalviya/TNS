@@ -11,21 +11,21 @@ const CuratedSlider = ({ title }) => {
     const Lcard = [
         {
             cardID: 1,
-            Url: "frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png",
+            poster: "frontend/public/image/sambhadur.png",
             content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
         },
         {
             cardID: 2,
-            Url: "frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png",
+            poster: "frontend/public/image/openhaimer.jpg",
             content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
         },
         {
             cardID: 3,
-            Url: "frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png",
+            poster: "frontend/public/image/openhaimer.jpg",
             content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
@@ -55,7 +55,7 @@ const CuratedSlider = ({ title }) => {
                         },
                     }}>
                     {Lcard.map((elem,index) => <div className="card flex flexbox" key={index} style={{
-                        background: `linear-gradient(to top, black, transparent), url(${elem.Url})`,
+                        background: `linear-gradient(to top, black, transparent), url(${elem.poster})`,
                     }}>
                         <div className='CardContainer flex flexbox'>
                             <div className="tag">
@@ -66,7 +66,7 @@ const CuratedSlider = ({ title }) => {
                             <Button>
                                 See All Titles
                                 {/* <span>
-                                <img height={"100%"} width={"100%"} src="frontend/public/arrow-sm-right.svg" alt="" />
+                                <img height={"100%"} width={"100%"} src="frontend/public/image/arrow-sm-right.svg" alt="" />
                             </span> */}
                             </Button>
                         </div>

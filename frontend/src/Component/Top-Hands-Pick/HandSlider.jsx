@@ -7,19 +7,19 @@ const HandSlider = ({title}) => {
     const Lcard = [
         {
             cardID: 1,
-            cardUrl: "frontend/public/da92a39b19b38d7c9b6e839bfff30d13.png",
+            cardUrl: "frontend/public/image/da92a39b19b38d7c9b6e839bfff30d13.png",
         },
         {
             cardID: 2,
-            cardUrl: "frontend/public/299c4228c5a9a0bad5783800b7cff179.png",
+            cardUrl: "frontend/public/image/299c4228c5a9a0bad5783800b7cff179.png",
         },
         {
             cardID: 3,
-            cardUrl: "frontend/public/96ec47c5bba1a99388ccc5c88666398e.png",
+            cardUrl: "frontend/public/image/96ec47c5bba1a99388ccc5c88666398e.png",
         },
         {
             cardID: 4,
-            cardUrl: "frontend/public/7c40e7950bccd488ce91b53447207cad.png",
+            cardUrl: "frontend/public/image/7c40e7950bccd488ce91b53447207cad.png",
         }
     ];
 
@@ -37,10 +37,10 @@ const HandSlider = ({title}) => {
                 <h3 className='SectionLable'>{title}{">"}</h3>
                 <div className='arrows'>
                 <span onClick={handlePrevClick}>
-                    <img src="frontend/public/left.svg" alt="" />
+                    <img src="frontend/public/image/left.svg" alt="" />
                 </span>
                 <span onClick={handleNextClick}>
-                    <img src="frontend/public/right.svg" alt="" />
+                    <img src="frontend/public/image/right.svg" alt="" />
                 </span>
             </div>
             <OwlCarousel className="HandCards flex"

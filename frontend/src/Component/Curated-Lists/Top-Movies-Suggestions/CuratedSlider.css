@@ -14,6 +14,9 @@
     min-width: 300px;
     border-radius: 25px;
     padding: 2rem;
+    background-position: center !important;
+    background-size: cover !important;
+    
     /* margin: 0 2rem ; */
 }
 
@@ -23,6 +26,7 @@
     border-radius: 10px;
     font-size: var(--tiny-font-size);
     background-color: var(--accesnt-color);
+    color:var(--black-color);
 }
 .CuratedCards .card h3 {
   color: var(--priamry-color);

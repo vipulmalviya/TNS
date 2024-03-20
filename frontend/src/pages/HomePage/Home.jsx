@@ -7,9 +7,6 @@ import MainSlider from '../../Component/MainSlider/MainSlider'
 import "./Home.css"
 // import Nav from '../../Component/Nav/Nav'
 
-
-
-
 const Home = ({value}) => {
   return (
     <Fragment>

@@ -13,6 +13,7 @@
     gap: 1rem;
     background-color: var(--background-color);
     padding: 0 5rem;
+    z-index: 1;
 }
 
 .Rleft li span {
@@ -134,7 +135,7 @@
 }
 
 .switch label::after {
-    content: url("frontend/public/Frame 556.svg");
+    content: url("frontend/public/image/Frame 556.svg");
     position: absolute;
     left: 5%;
     top: 55%;

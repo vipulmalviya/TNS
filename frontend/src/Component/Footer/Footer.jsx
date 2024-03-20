@@ -3,25 +3,20 @@ import "./Footer.css"
 
 const Footer = () => {
 
-    const [click, setClick] = useState(false)
-
-    function clickfunc() {
-        setClick(!click)
-    }
 
     return (
         <footer className='footer'>
-            <div className={`footerT flex ${click ? "footercls" : ""}`}>
+            <div className="footerT flex">
                 <div className='Flogo'>
-                    <img src="frontend/public/Logo.svg" alt="" />
+                    <img src="frontend/public/image/Logo.svg" alt="" />
                 </div>
                 <div className='social flex'>
-                    <img src="frontend/public/facebook.svg" alt="" />
-                    <img src="frontend/public/instagram.svg" alt="" />
-                    <img src="frontend/public/tweeter.svg" alt="" />
+                    <img src="frontend/public/image/facebook.svg" alt="" />
+                    <img src="frontend/public/image/instagram.svg" alt="" />
+                    <img src="frontend/public/image/tweeter.svg" alt="" />
                 </div>
             </div>
-            <div className={`footerM flex ${click ? "footercls" : ""}`}>
+            <div className="footerM flex">
                 <div className='footerM-l'>
                     <h2 className=''>
                         Still couldn’t figure out?<br /> What to watch?<br />
@@ -29,8 +24,8 @@ const Footer = () => {
                     </h2>
                     <p>It’s free to join and helps finding underrated titles, around like minded there is a sense of cinema.</p>
                     <div className='footerbtns flex'>
-                        <button><img src="frontend/public/Frame 20.svg" alt="" /></button>
-                        <button><img src="frontend/public/Frame 50.svg" alt="" /></button>
+                        <button><img src="frontend/public/image/Frame 20.svg" alt="" /></button>
+                        <button><img src="frontend/public/image/Frame 50.svg" alt="" /></button>
                     </div>
                 </div>
                 <div className='footerM-r flex' >
@@ -58,7 +53,7 @@ const Footer = () => {
             </div>
             <div className='footerB flex'>
                 <p>© 2024 Silvertounge. All Rights Reserved.</p>
-                <button onClick={clickfunc}>{click ? "v" : "v"}</button>
+                <button><img src="frontend/public/image/topbtn.svg" alt="" /></button>
             </div>
         </footer>
     )

@@ -8,43 +8,70 @@ import ButtonSec from '../buttons/ButtonSec';
 
 const MainSlider = () => {
 
-    const [Movies, setMovies] = useState(
-        [
-            // {
-            //     imageUrl: 'frontend/public/Rectangle 15.jpg',
-            //     title: 'OPPENHEIMER',
-            //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
-            //     year: "2023",
-            //     watch: "97.3",
-            //     catagory: "Biography, Drama",
-            // },
-            // {
-            //     imageUrl: 'frontend/public/sambhadur.png',
-            //     title: 'OPPENHEIMER',
-            //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
-            //     year: "2023",
-            //     watch: "97.3",
-            //     catagory: "Biography, Drama",
-            // },
-            // {
-            //     imageUrl: 'frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png',
-            //     title: 'OPPENHEIMER',
-            //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
-            //     year: "2023",
-            //     watch: "97.3",
-            //     catagory: "Biography, Drama",
-            // }
-        ]
-    )
-    const fetchMovieData = async () => {
-        const response = await fetch("http://www.omdbapi.com/?s=spider-man&type=movie&apikey=9c06a160");
-        const responsejason = await response.json();
-        setMovies(responsejason.Search)
-    }
+    const data = [{
+        Poster: 'frontend/public/image/openhaimer.jpg',
+        Title: 'OPPENHEIMER',
+        description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
+        Year: "2023",
+        watch: "97.3",
+        catagory: "Biography, Drama",
+    },
+    {
+        Poster: 'frontend/public/image/sambhadur.png',
+        Title: 'OPPENHEIMER',
+        description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
+        Year: "2023",
+        watch: "97.3",
+        catagory: "Biography, Drama",
+    },
+    {
+        Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+        Title: 'OPPENHEIMER',
+        description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
+        Year: "2023",
+        watch: "97.3",
+        catagory: "Biography, Drama",
+    }]
 
-    useEffect(() => {
-        fetchMovieData();
-    }, [])
+
+
+    // const [Movies, setMovies] = useState(
+    //     [
+    //         // {
+    //         //     imageUrl: 'frontend/public/image/Rectangle 15.jpg',
+    //         //     title: 'OPPENHEIMER',
+    //         //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
+    //         //     year: "2023",
+    //         //     watch: "97.3",
+    //         //     catagory: "Biography, Drama",
+    //         // },
+    //         // {
+    //         //     imageUrl: 'frontend/public/image/sambhadur.png',
+    //         //     title: 'OPPENHEIMER',
+    //         //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
+    //         //     year: "2023",
+    //         //     watch: "97.3",
+    //         //     catagory: "Biography, Drama",
+    //         // },
+    //         // {
+    //         //     imageUrl: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+    //         //     title: 'OPPENHEIMER',
+    //         //     description: 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...',
+    //         //     year: "2023",
+    //         //     watch: "97.3",
+    //         //     catagory: "Biography, Drama",
+    //         // }
+    //     ]
+    // )
+    // // const fetchMovieData = async () => {
+    // //     const response = await fetch("http://www.omdbapi.com/?s=spider-man&type=movie&apikey=9c06a160");
+    // //     const responsejason = await response.json();
+    // //     setMovies(responsejason.Search)
+    // // }
+
+    // // useEffect(() => {
+    // //     fetchMovieData();
+    // // }, [])
 
 
     const handlePrevClick = () => {
@@ -60,10 +87,10 @@ const MainSlider = () => {
         <div className='MainSlider'>
             <div className='arrows'>
                 <span onClick={handlePrevClick}>
-                    <img src="frontend/public/left.svg" alt="" />
+                    <img src="frontend/public/image/left.svg" alt="" />
                 </span>
                 <span onClick={handleNextClick}>
-                    <img src="frontend/public/right.svg" alt="" />
+                    <img src="frontend/public/image/right.svg" alt="" />
                 </span>
             </div>
             <OwlCarousel
@@ -89,43 +116,43 @@ const MainSlider = () => {
 
             >
 
-                {Movies.map((slide, index) => (
+                {data.map((slide, index) => (
                     <div key={index} className="slide-item">
                         <div className='bannerContainer'
-                         style={{
-                            background: `linear-gradient(to top, black, transparent), url(${slide.Poster})`,
-                            backgroundPosition: 'center',
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat'
-                        }}>
-                            {/* <img height={"100%"} width={"100%"} className='bannerImg' src={slide.Poster} alt={slide.title} /> */}
+                            style={{
+                                background: `linear-gradient(to top, black, transparent), url(${slide.Poster})`,
+                                backgroundPosition: 'center',
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat'
+                            }}>
+    
                         </div>
                         <div className="slide-details">
                             <h2 className='movieTitle'>{slide.Title}</h2>
                             <div className='aboutMovie flex'>
-                                <p>{slide.Type}</p>
+                                <p>{slide.catagory}</p>
                                 <p>{slide.Year}</p>
                                 <span className='flex'>
-                                    <img src="frontend/public/Icon (5).svg" alt="" />
+                                    <img src="frontend/public/image/Icon (5).svg" alt="" />
                                     <h3 className="number">{slide.watch}</h3>
                                 </span>
                             </div>
                             <p className='movieDescription'>{slide.description}</p>
                             <div className='movieBtns flex'>
                                 <Button>
-                                    <img height={"17px"} width={"17px"} src="frontend/public/play.svg" alt="" />
+                                    <img height={"17px"} width={"17px"} src="frontend/public/image/play.svg" alt="" />
                                     <p>stream now</p>
                                 </Button>
                                 <ButtonSec>
-                                    <img height={"17px"} width={"17px"} src="frontend/public/plus-large.svg" alt="" />
+                                    <img height={"17px"} width={"17px"} src="frontend/public/image/plus-large.svg" alt="" />
                                     <p>add to watchlist</p>
                                 </ButtonSec>
                             </div>
                         </div>
                     </div>
-                ))}
+                )
+                )}
             </OwlCarousel>
-            {/* </div> */}
         </div>
     );
 };
