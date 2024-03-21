@@ -3,6 +3,7 @@ import OwlCarousel from 'react-owl-carousel';
 import "./MainSlider.css"
 import Button from '../buttons/Button';
 import ButtonSec from '../buttons/ButtonSec';
+import { Link } from 'react-router-dom';
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.default.css';
 
@@ -74,13 +75,13 @@ const MainSlider = () => {
     // // }, [])
 
 
-    const handlePrevClick = () => {
-        $(".owl-carousel").trigger("prev.owl.carousel");
-    };
+    // const handlePrevClick = () => {
+    //     $(".owl-carousel").trigger("prev.owl.carousel");
+    // };
 
-    const handleNextClick = () => {
-        $(".owl-carousel").trigger("next.owl.carousel");
-    };
+    // const handleNextClick = () => {
+    //     $(".owl-carousel").trigger("next.owl.carousel");
+    // };
 
 
     return (
@@ -126,7 +127,6 @@ const MainSlider = () => {
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat'
                             }}>
-    
                         </div>
                         <div className="slide-details">
                             <h2 className='movieTitle'>{slide.Title}</h2>
@@ -142,7 +142,7 @@ const MainSlider = () => {
                             <div className='movieBtns flex'>
                                 <Button>
                                     <img height={"17px"} width={"17px"} src="frontend/public/image/play.svg" alt="" />
-                                    <p>stream now</p>
+                                    <Link  to="/SingleMoviePage">stream now</Link>
                                 </Button>
                                 <ButtonSec>
                                     <img height={"17px"} width={"17px"} src="frontend/public/image/plus-large.svg" alt="" />

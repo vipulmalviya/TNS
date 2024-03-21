@@ -231,7 +231,7 @@
     /* transition: all 0.25s ease 0s; */
 }
 
-input {
+.rating-stars input {
     display: none;
 }
 
