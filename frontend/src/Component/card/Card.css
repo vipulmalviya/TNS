@@ -1,0 +1,47 @@
+.MovieCards .card {
+    min-height: 600px;
+    min-width: 350px;
+    padding: 2rem;
+    /* background: red; */
+}
+
+.MovieCards .card img {
+    border-radius: 25px !important;
+}
+
+.movieDetails {
+    justify-content: space-between !important;
+    /* background-color: red; */
+    padding: 1rem 0;
+    color: var(--priamry-color);
+    gap: 1rem;
+}
+
+.movieDetails h4 {
+    width: 50%;
+    font-size: var(--normal-font-size);
+    line-height: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    padding-right: 1rem;
+}
+
+.movieDetails p {
+    font-size: var(--tiny-font-size);
+    line-height: 2rem;
+}
+
+.movieDetails span {
+    justify-content: space-between;
+}
+
+.movieDetails span img {
+    width: fit-content !important;
+}
+
+@media screen and (max-width: 428px) {
+    .MovieCards {
+        padding: 1rem;
+    }
+}

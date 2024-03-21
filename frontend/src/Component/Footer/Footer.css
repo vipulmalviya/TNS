@@ -173,6 +173,13 @@
     .search input {
         max-width: 300px;
     }
+}
 
 
+@media screen and (max-width: 428px) {
+    .footerB button {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+    }
 }

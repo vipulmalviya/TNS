@@ -25,7 +25,7 @@
 
 
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 800px) {
 
     .pcontainer{
         flex-direction: column;
@@ -34,4 +34,17 @@
         line-height:1.5rem !important;
     }
 
+}
+
+@media screen and (max-width: 428px) {
+
+    .pcontainer{
+        padding:2rem ;
+        gap: 1rem;
+    }
+
+    .pcontainer > .mainbtnSec{
+        padding: 1rem 1.5rem;
+    }
+  
 }

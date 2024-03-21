@@ -8,11 +8,9 @@
 }
 
 .MovieCards .card {
-    /* height: 600px; */
+    min-height: 600px;
     min-width: 350px;
     padding: 2rem;
-
-
     /* background: red; */
 }
 

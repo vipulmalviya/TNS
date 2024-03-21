@@ -38,7 +38,7 @@ function App() {
           <Route path="/" element={<Login prop={onClick} open={open} />} />
           <Route path="/register" element={<Register prop={onClick} open={open} click={Click} />} />
           <Route exact path="/home" element={<Home />} />
-          <Route path="/movies/:id" element={<SingleMoviePage />} />
+          <Route path="/SingleMoviePage" element={<SingleMoviePage />} />
           <Route path="/watchlist" element={<WatchlistPage />} />
           <Route path="/uploade" element={<Movieform />} />
         </Routes>

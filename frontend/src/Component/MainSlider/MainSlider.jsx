@@ -85,18 +85,18 @@ const MainSlider = () => {
 
     return (
         <div className='MainSlider'>
-            <div className='arrows'>
+            {/* <div className='arrows'>
                 <span onClick={handlePrevClick}>
                     <img src="frontend/public/image/left.svg" alt="" />
                 </span>
                 <span onClick={handleNextClick}>
                     <img src="frontend/public/image/right.svg" alt="" />
                 </span>
-            </div>
+            </div> */}
             <OwlCarousel
                 items={3}
                 margin={20}
-                nav={false}
+                nav={true}
                 dots={true}
                 className='MainSlider'
                 //  responsiveClass={false}
@@ -105,6 +105,7 @@ const MainSlider = () => {
                 responsive={{
                     0: {
                         items: 1,
+                        nav:false,
                     },
                     768: {
                         items: 1,

@@ -6,23 +6,24 @@
 }
 
 .slide-item {
+  position: relative;
   height: 100vh;
   width: 100%;
 }
 
-.bannerContainer{
+.bannerContainer {
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom , #0000 ,#ffff);
+  background: linear-gradient(to bottom, #0000, #ffff);
 }
 
 /* Slide details */
 .slide-details {
   position: absolute;
-  max-width: 500px;
+  width: 500px;
   bottom: 100px;
   left: 60px;
   color: #fff;
@@ -48,6 +49,9 @@
   margin-right: 3rem;
   font-weight: 600 !important;
   letter-spacing: .1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .movieDescription {
@@ -60,26 +64,57 @@
   margin-left: .5rem;
 }
 
-.arrows {
+.owl-prev {
   background-color: transparent;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1rem 5rem;
   position: absolute;
-  left: 0;
-  top: 50%;
+  left: 0%;
+  top: 40%;
   font-weight: 100 !important;
-  transform: translate(0%, -50%);
+  transform: translate(0%, -40%);
   z-index: 10;
 }
 
-.arrows img {
-  height: 3vw;
-  cursor: pointer;
+.owl-prev span {
+  font-size: 10rem;
+  font-weight: 100 !important;
+  font-family: "system-ui";
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.575) !important;
+  content: "heiil" !important;
 }
 
+.owl-next span {
+  font-size: 10rem;
+  font-weight: 100 !important;
+  font-family: "system-ui";
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.575) !important;
+  content: "heiil" !important;
+}
+
+.owl-next {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  position: absolute;
+  right: 0%;
+  top: 40%;
+  font-weight: 100 !important;
+  transform: translate(0%, -40%);
+  z-index: 10;
+}
+
+/* .arrows img {
+  height: 3vw;
+  cursor: pointer;
+} */
+
 .movieBtns {
+  position: relative;
   gap: 1rem;
 }
 
@@ -90,12 +125,12 @@
 }
 
 .movieBtns .mainbtn>img {
-  width: fit-content;
+  width: 15px;
   margin: 0 1rem;
 }
 
 .movieBtns .mainbtnSec img {
-  width: fit-content;
+  width: 15px;
   margin: 0 1rem;
 }
 
@@ -134,7 +169,7 @@
 @media screen and (max-width: 800px) {
   .slide-details {
     padding: 1rem;
-    max-width: 500px;
+    /* width: 100%; */
     left: 0px;
   }
 
@@ -142,7 +177,54 @@
     transform: translate(-50%, -50%);
   }
 
-  .arrows{
+  .arrows {
     display: none;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .slide-details {
+    padding: 1rem;
+    width: 100%;
+    /* left: 0px; */
+
+  }
+
+  .movieTitle {
+    margin-bottom: 0px;
+  }
+
+  .aboutMovie {
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: var(--tiny-font-size);
+  }
+
+  .movieDescription {
+    font-size: var(--tiny-font-size);
+  }
+
+  .movieBtns .mainbtn {
+    font-size: var(--normal-font-size) !important;
+  }
+
+  .movieBtns .mainbtn>img {
+    width: 12px;
+    margin: 0 .5rem;
+  }
+
+  .movieBtns .mainbtnSec img {
+    width: fit-content;
+    margin: 0rem;
+
+  }
+
+  .movieBtns .mainbtnSec {
+    border: 1px solid var(--accesnt-color);
+    padding: .5rem .5rem;
+  }
+
+  .MainSlider .MainSlider .owl-dots .active {
+    padding: .5rem !important;
+    background: var(--accesnt-color) !important;
   }
 }

@@ -38,7 +38,7 @@ const CuratedSlider = ({ title }) => {
                 <OwlCarousel className="CuratedCards flex"
                     items={4}
                     margin={20}
-                    nav={true}
+                    nav={false}
                     // responsiveClass={false}
                     dots={false}
                     autoplay={true}
@@ -46,6 +46,7 @@ const CuratedSlider = ({ title }) => {
                     responsive={{
                         0: {
                             items: 1,
+                            
                         },
                         768: {
                             items: 2,

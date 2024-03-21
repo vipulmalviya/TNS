@@ -23,10 +23,12 @@ nav .left {
     height: 100%;
     width: 30%;
 }
-.navM{
+
+.navM {
     width: 100%;
     justify-content: flex-end !important;
 }
+
 .navM form {
     position: relative;
     border: 1px solid #c2bebe5a;
@@ -37,11 +39,13 @@ nav .left {
     border-radius: 12px;
     height: 35px;
 }
+
 .navM form img {
-   position: absolute;
-   left: 10%;
-   cursor: pointer;
+    position: absolute;
+    left: 10%;
+    cursor: pointer;
 }
+
 .navM input {
     position: absolute;
     color: white !important;
@@ -59,10 +63,11 @@ nav .right {
     width: 30%;
 }
 
-.Watchlist{
+.Watchlist {
+    position: relative;
     gap: 2rem;
-    color:var(--priamry-color);
-    font-family:"sfregular" !important ;
+    color: var(--priamry-color);
+    font-family: "sfregular" !important;
 }
 
 .hamburgur {
@@ -76,5 +81,42 @@ nav .right {
 @media screen and (max-width: 800px) {
     nav {
         padding: 0rem 1rem;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .navM form {
+        display: none;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .Watchlist img {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+
+    .Watchlist p {
+        display: none;
+    }
+
+    .Watchlist::before {
+        position: absolute;
+        content: "My Watchlist";
+        left: 50%;
+        top: 200%;
+        transform: translate(-150%, -50%);
+        height: 100%;
+        width: 100%;
+        white-space: nowrap;
+        opacity: 0;
+        transition: all ease-in .3s;
+    }
+    .Watchlist:hover::before {
+        opacity: 1;
     }
 }

@@ -3,6 +3,7 @@ import "./HandSlider.css"
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+
 const HandSlider = ({title}) => {
     const Lcard = [
         {
@@ -36,30 +37,37 @@ const HandSlider = ({title}) => {
         <div className="container">
                 <h3 className='SectionLable'>{title}{">"}</h3>
                 <div className='arrows'>
-                <span onClick={handlePrevClick}>
+                {/* <span onClick={handlePrevClick}>
                     <img src="frontend/public/image/left.svg" alt="" />
                 </span>
                 <span onClick={handleNextClick}>
                     <img src="frontend/public/image/right.svg" alt="" />
-                </span>
+                </span> */}
             </div>
             <OwlCarousel className="HandCards flex"
                 items={4}
                 margin={20}
                 responsiveClass={false}
+                nav={true}
                 autoplay={false}
                 dots={false}
                 autoplayHoverPause={false}
                 responsive={{
                     0: {
                         items: 1,
+                        nav:false,
+
                     },
-                    768: {
+                    800: {
                         items: 2,
+                        margin:100,
                     },
                     1000: {
                         items: 4,
                     },
+                    // 1280: {
+                    //     items: 4,
+                    // }
                 }}>
                 {Lcard.map((elem,index) => <div className="card flex" key={index}>
                     <h2 className='flex'>{elem.cardID}</h2>

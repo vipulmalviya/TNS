@@ -30,6 +30,7 @@ body {
 
 a {
   text-decoration: none !important;
+  color: var(--black-color) !important;
 }
 
 /* reusable classes */
@@ -95,6 +96,12 @@ body::-webkit-scrollbar {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .container{
+    width: 100% !important;
+  }
+ 
+}
 @media screen and (max-width: 768px) {
   :root {
     --big-font-size: 3.5em;
@@ -107,6 +114,7 @@ body::-webkit-scrollbar {
   section {
     padding: 1rem;
   }
+ 
 }
 
 @media screen and (max-width: 428px) {

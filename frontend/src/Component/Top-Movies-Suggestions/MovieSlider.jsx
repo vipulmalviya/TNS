@@ -1,12 +1,12 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import "./movieSlider.css"
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import Button from '../buttons/Button';
+import Card from '../card/Card';
 
 
-const MovieSlider = ({ title, type }) => {
+const MovieSlider = ({ title}) => {
 
     const data = [
         {
@@ -73,7 +73,7 @@ const MovieSlider = ({ title, type }) => {
     //     fetchMovieData();
     // })
 
-console.log(Movies);
+    console.log(Movies);
     const handlePrevClick = () => {
         $(".owl-carousel").trigger("prev.owl.carousel");
     };
@@ -86,14 +86,14 @@ console.log(Movies);
         <section>
             <div className="container">
                 <h3 className='SectionLable'>{title}{">"}</h3>
-                <div className='arrows'>
+                {/* <div className='arrows'>
                     <span onClick={handlePrevClick}>
                         <img src="frontend/public/image/left.svg" alt="" />
                     </span>
                     <span onClick={handleNextClick}>
                         <img src="frontend/public/image/right.svg" alt="" />
                     </span>
-                </div>
+                </div> */}
                 <OwlCarousel className="MovieCards flex"
                     items={5}
                     margin={10}
@@ -106,30 +106,18 @@ console.log(Movies);
                         0: {
                             items: 1,
                             nav: false,
+
                         },
                         768: {
-                            items: 3,
-                            nav: false,
+                            items: 2,
                         },
                         1000: {
-                            items: 5,
-                            nav: false,
-                        },
+                            items: 4,
+                        }
                     }}>
-                    {data.map((elem, index) => <div className="card " key={index}>
-                        <img height={"400px"} width={"400px"} src={elem.Poster} alt="" />
-                        <div className='movieDetails'>
-                            <span className='flex'>
-                                <h4>{elem.Title}</h4>
-                                <img height={"30px"} src="frontend/public/image/TNS 1.svg" alt="" />
-                            </span>
-                            <span className='flex'>
-                                <p>{elem.catagory}</p>
-                                <span className="number">{elem.watch}</span>
-                            </span>
-                            <Button>+ Add to Watchlist</Button>
-                        </div>
-                    </div>)}
+                    {data.map((elem, index) =>
+                        <Card index={index} Poster={elem.Poster} Title={elem.Title} catagory={elem.catagory} watch={elem.watch} />
+                    )}
                 </OwlCarousel>
             </div>
         </section>

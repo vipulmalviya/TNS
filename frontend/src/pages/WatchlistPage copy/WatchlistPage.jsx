@@ -11,13 +11,13 @@ import CuratedSlider from '../../Component/Curated-Lists/Top-Movies-Suggestions/
 
 const arr = [
   {
-    img: "frontend/public/7c40e7950bccd488ce91b53447207cad.png",
+    img: "frontend/public/image/7c40e7950bccd488ce91b53447207cad.png",
   },
   {
-    img: "frontend/public/7c40e7950bccd488ce91b53447207cad.png",
+    img: "frontend/public/image/7c40e7950bccd488ce91b53447207cad.png",
   },
   {
-    img: "frontend/public/7c40e7950bccd488ce91b53447207cad.png",
+    img: "frontend/public/image/7c40e7950bccd488ce91b53447207cad.png",
   }
 
 ]
@@ -25,40 +25,40 @@ const arr = [
 
 const data = [
   {
-    Poster: 'frontend/public/da92a39b19b38d7c9b6e839bfff30d13.png',
+    Poster: 'frontend/public/image/da92a39b19b38d7c9b6e839bfff30d13.png',
     Title: 'title',
     watch: "97.3",
     catagory: "Biography, Drama",
   },
   {
-    Poster: 'frontend/public/sambhadur.png',
+    Poster: 'frontend/public/image/sambhadur.png',
     Title: 'title',
     watch: "97.3",
     catagory: "Biography, Drama",
   },
   {
-    Poster: 'frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png',
-    Title: 'title',
-
-    watch: "97.3",
-    catagory: "Biography, Drama",
-  },
-  {
-    Poster: 'frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png',
+    Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
     Title: 'title',
 
     watch: "97.3",
     catagory: "Biography, Drama",
   },
   {
-    Poster: 'frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png',
+    Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
     Title: 'title',
 
     watch: "97.3",
     catagory: "Biography, Drama",
   },
   {
-    Poster: 'frontend/public/949842150786a7e1e3aeee4a1b3be7bd.png',
+    Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
+    Title: 'title',
+
+    watch: "97.3",
+    catagory: "Biography, Drama",
+  },
+  {
+    Poster: 'frontend/public/image/949842150786a7e1e3aeee4a1b3be7bd.png',
     Title: 'title',
 
     watch: "97.3",
@@ -76,7 +76,7 @@ const WatchlistPage = () => {
           <div className='header flex'>
             <h2>My Watchlist </h2>
             <div className='flex gap-1'>
-              <img height={"30px"} width={"30px"} src="frontend/public/addbtn.svg" alt="" />
+              <img height={"30px"} width={"30px"} src="frontend/public/image/addbtn.svg" alt="" />
               <p>Create New Watchlist</p>
             </div>
           </div>
@@ -142,16 +142,20 @@ const WatchlistPage = () => {
                 nav: false,
               },
               1000: {
-                items: 5,
+                items: 4,
                 nav: false,
               },
+              // 1280: {
+              //   items: 3,
+              //   nav: false,
+              // },
             }}>
             {data.map((elem, index) => <div className="card " key={index}>
               <img height={"400px"} width={"400px"} src={elem.Poster} alt="" />
               <div className='movieDetails'>
                 <span className='flex'>
                   <h3>{elem.Title}</h3>
-                  <img height={"30px"} src="frontend/public/TNS 1.svg" alt="" />
+                  <img height={"30px"} src="frontend/public/image/TNS 1.svg" alt="" />
                 </span>
                 <span className='flex'>
                   <p>{elem.catagory}</p>
@@ -187,22 +191,26 @@ const WatchlistPage = () => {
                 nav: false,
               },
               1000: {
-                items: 5,
+                items: 4,
                 nav: false,
               },
+              // 1280: {
+              //   items: 3,
+              //   nav: false,
+              // },
             }}>
             {data.map((elem, index) => <div className="card " key={index}>
               <img height={"400px"} width={"400px"} src={elem.Poster} alt="" />
               <div className='movieDetails'>
                 <span className='flex'>
                   <h3>{elem.Title}</h3>
-                  <img height={"30px"} src="frontend/public/TNS 1.svg" alt="" />
+                  <img height={"30px"} src="frontend/public/image/TNS 1.svg" alt="" />
                 </span>
                 <span className='flex'>
                   <p>{elem.catagory}</p>
                   <span className="number">{elem.watch}</span>
                 </span>
-                <ButtonSec><img height={"20px"} width={"20px"} src="frontend/public/pen-line.svg" alt="" />Write a Review</ButtonSec>
+                <ButtonSec><img height={"20px"} width={"20px"} src="frontend/public/image/pen-line.svg" alt="" />Write a Review</ButtonSec>
               </div>
             </div>)}
           </OwlCarousel>
