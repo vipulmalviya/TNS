@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Nav.css"
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Nav = ({ onclick, open ,onchangefunc ,InputValue }) => {
 
@@ -8,7 +8,7 @@ const Nav = ({ onclick, open ,onchangefunc ,InputValue }) => {
         <header>
             <nav className='flex'>
                 <div className="left flex">
-                    <div className="logo"><img height={"100%"} weight={"100%"} src="frontend/public/image/Logo.svg" alt="" /></div>
+                    <Link to="/home" className="logo"><img height={"100%"} weight={"100%"} src="frontend/public/image/Logo.svg" alt="" /></Link>
                 </div>
                 <div className="navM flex">
                     <form action="" className='flex'>

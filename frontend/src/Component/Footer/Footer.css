@@ -130,6 +130,9 @@
     background-color: transparent;
 }
 
+.Rfooter a{
+    color: var(--priamry-color) !important;
+}
 
 
 @media screen and (max-width: 800px) {

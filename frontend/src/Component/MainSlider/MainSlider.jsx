@@ -146,7 +146,7 @@ const MainSlider = () => {
                                 </Button>
                                 <ButtonSec>
                                     <img height={"17px"} width={"17px"} src="frontend/public/image/plus-large.svg" alt="" />
-                                    <p>add to watchlist</p>
+                                    <Link to="/curatedPage">add to watchlist</Link>
                                 </ButtonSec>
                             </div>
                         </div>

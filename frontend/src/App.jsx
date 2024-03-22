@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Footer from './Component/Footer/Footer';
 import Movieform from './pages/movieuplodeform/Movieform.jsx';
+import { CuratedPage } from './pages/SingleCuratedListPage/CuratedPage.jsx';
 
 
 
@@ -24,10 +25,6 @@ function App() {
     setClick(!Click)
   }
 
-
-  // console.log(InputValue);
-
-
   const location = useLocation();
 
   return (
@@ -41,6 +38,7 @@ function App() {
           <Route path="/SingleMoviePage" element={<SingleMoviePage />} />
           <Route path="/watchlist" element={<WatchlistPage />} />
           <Route path="/uploade" element={<Movieform />} />
+          <Route path="/curatedPage" element={<CuratedPage />} />
         </Routes>
         <Footer />
       </AnimatePresence>

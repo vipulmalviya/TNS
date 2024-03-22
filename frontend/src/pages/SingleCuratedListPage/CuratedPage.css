@@ -1,0 +1,154 @@
+.Curated_banner {
+    min-height: 80vh;
+    width: 100%;
+    background-position: center !important;
+    position: relative;
+}
+
+.Curated_banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(49, 48, 48, 0.612));
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(25px);
+}
+
+.Curated_movie_details {
+    bottom: 10%;
+    left: 5%;
+    position: absolute;
+    max-width: 1000px;
+    padding: 2rem;
+    color: var(--priamry-color) !important;
+    gap: 1rem;
+    align-items: flex-start !important;
+}
+
+.Curated_movie_details h3 {
+    font-size: var(--h1-font-size);
+}
+
+.Curated_movie_details p {
+    font-size: var(--normal-font-size);
+}
+
+.tag {
+    color: var(--black-color);
+    background-color: var(--accesnt-color);
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.Curated_list_Container {
+    width: 100%;
+    height: 100%;
+    padding: 4rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+}
+
+.Curated_list_Container .number_div {
+    font-size: var(--big-font-size);
+    font-family: "sfbold";
+    font-weight: 800;
+    align-self: flex-start;
+}
+
+.Curated_list_Container .center_div>.Sleft {
+    width: fit-content !important;
+    padding: 0 !important;
+}
+
+.Curated_list_Container .center_div .Sleft .aboutMovies .Details {
+    gap: 0rem !important;
+}
+
+.Curated_list_Container .ratting_div {
+    width: 50%;
+}
+
+.Curated_list_Container .ratting_div .movieScore {
+    row-gap: 2rem;
+}
+.Curated_list_Container .ratting_div .movieScore .aboutTns>div {
+    gap: 2rem;
+}
+
+.buttonDiv {
+    gap: 1rem;
+}
+
+.ratting_div .aboutTns h3 {
+    color: var(--accesnt-color);
+}
+
+.buttonDiv h3 {
+    align-self: flex-start;
+    color: var(--accesnt-color);
+}
+
+.buttonDiv .mainbtn {
+    gap: 1rem;
+    margin-top: 0;
+}
+
+.buttonDiv .mainbtnSec {
+    gap: 1rem;
+    border-color: var(--accesnt-color);
+    color: var(--accesnt-color) !important;
+}
+
+
+@media screen and (max-width: 850px) {
+    .Curated_list_Container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .Curated_list_Container .center_div {
+        width: 100%;
+    }
+    .Curated_list_Container .center_div .Sleft {
+        width: 100%;
+    }
+
+    .Curated_list_Container .ratting_div {
+        width: 100%;
+    }
+
+    .Curated_list_Container .ratting_div .movieScore {
+        flex-direction: row ;
+        justify-content: space-between;
+    }
+
+
+}
+
+@media screen and (max-width: 428px) {
+    .number_div{
+    padding: 2rem 0;
+    }
+    .Curated_list_Container .ratting_div .aboutTns {
+        width: 100%;
+    }
+    .Curated_list_Container .ratting_div .aboutTns > div {
+        justify-content: space-between !important;
+    }
+    .Curated_list_Container .ratting_div .movieScore {
+        flex-direction: column ;
+        justify-content: flex-start ;
+        width: 100%;
+    }
+    .Curated_list_Container .ratting_div .buttonDiv {
+        flex-direction: column ;
+        justify-content: flex-start !important;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 360px) {}

@@ -4,6 +4,9 @@
   z-index: 1 !important;
   /* background-color: red; */
 }
+.MainSlider .mainbtnSec a {
+  color: var(--accesnt-color) !important;
+}
 
 .slide-item {
   position: relative;

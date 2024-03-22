@@ -10,14 +10,6 @@ import MovieSlider from '../../Component/Top-Movies-Suggestions/MovieSlider'
 
 const SingleMoviePage = () => {
 
-
-
-
-
-
-
-
-
   return (
     <Fragment>
       <div className='Movieposter'

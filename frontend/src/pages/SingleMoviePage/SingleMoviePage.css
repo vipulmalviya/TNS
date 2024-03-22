@@ -235,7 +235,7 @@
     display: none;
 }
 
-label {
+.movierating label {
     width: 20px;
     height: 20px;
     background: #000b;
@@ -246,11 +246,11 @@ label {
     clip-path: polygon(50% 0%, 66% 32%, 100% 38%, 78% 64%, 83% 100%, 50% 83%, 17% 100%, 22% 64%, 0 38%, 34% 32%);
 }
 
-label[for=rs0] {
+.movierating label[for=rs0] {
     display: none;
 }
 
-label:before {
+.movierating label:before {
     width: 100%;
     height: 90%;
     content: "";
@@ -265,11 +265,11 @@ label:before {
 }
 
 
-input:checked+label~label:before {
+input:checked+.movierating label~.movierating label:before {
     background-position: 100% 0;
 }
 
-input:checked+label~label:hover:before {
+input:checked+.movierating label~.movierating label:hover:before {
     background-position: 0% 0
 }
 
@@ -313,47 +313,47 @@ input:checked+label~label:hover:before {
     content: "10";
 }
 
-label+input:checked~.rating-counter:before {
+.movierating label+input:checked~.rating-counter:before {
     color: #ffab00 !important;
 }
 
-label[for=rs1]:hover~.rating-counter:before {
+.movierating label[for=rs1]:hover~.rating-counter:before {
     content: "1" !important;
 }
 
-label[for=rs2]:hover~.rating-counter:before {
+.movierating label[for=rs2]:hover~.rating-counter:before {
     content: "2" !important;
 }
 
-label[for=rs3]:hover~.rating-counter:before {
+.movierating label[for=rs3]:hover~.rating-counter:before {
     content: "3" !important;
 }
 
-label[for=rs4]:hover~.rating-counter:before {
+.movierating label[for=rs4]:hover~.rating-counter:before {
     content: "4" !important;
 }
 
-label[for=rs5]:hover~.rating-counter:before {
+.movierating label[for=rs5]:hover~.rating-counter:before {
     content: "5" !important;
 }
 
-label[for=rs6]:hover~.rating-counter:before {
+.movierating label[for=rs6]:hover~.rating-counter:before {
     content: "6" !important;
 }
 
-label[for=rs7]:hover~.rating-counter:before {
+.movierating label[for=rs7]:hover~.rating-counter:before {
     content: "7" !important;
 }
 
-label[for=rs8]:hover~.rating-counter:before {
+.movierating label[for=rs8]:hover~.rating-counter:before {
     content: "8" !important;
 }
 
-label[for=rs9]:hover~.rating-counter:before {
+.movierating label[for=rs9]:hover~.rating-counter:before {
     content: "9" !important;
 }
 
-label[for=rs10]:hover~.rating-counter:before {
+.movierating label[for=rs10]:hover~.rating-counter:before {
     content: "10" !important;
 }
 
@@ -390,7 +390,7 @@ margin: 0rem 1rem 0 0;
 }
 
 .right > div{
-    align-items: flex-start !important;
+    /* align-items: flex-start !important; */
     gap: 1rem;
 }
 .right > p{
@@ -416,6 +416,15 @@ border-color: var(--accesnt-color);
 
     .Sleft,
     .Sright {
+        width: 100%;
+    }
+    .movierating{
+        padding: 2rem;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .right,.left{
         width: 100%;
     }
 }
@@ -447,6 +456,9 @@ border-color: var(--accesnt-color);
 
     .movieScore,
     .Alluser {
+        padding: 1rem;
+    }
+    .movierating{
         padding: 1rem;
     }
 }
